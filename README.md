@@ -1,9 +1,8 @@
 # roam-show-favicon
 
-Roam Research extension that will display the favicon (small website icon) for any http links.
+A simple Roam Research extension that will display the favicon (small website icon) for any http links.
 
-This extension can be installed using Roam Depot.
-
+This extension can be installed using Roam Depot. It doesn't manipulate your notes in any way (in fact it doesn't use the [Roam API](https://roamresearch.com/#/app/developer-documentation/page/tIaOPdXCj)). The icon is added using the css background-image property in the `<a>` element relative to the link. For more details see this article: https://css-tricks.com/favicons-next-to-external-links/
 
 
 

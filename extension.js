@@ -30,32 +30,29 @@ function onunload() {
 function createObserver (selector) {
 
 	let rootEl = document.querySelector(selector);
-	console.log({ rootEl })
+
 	let observerCallback = function observerCallback (mutationsList, observer) {
 
-		// we don't care about mutationsList; it's simpler (and faster) to query the DOM directly
-		// Array.from(document.querySelectorAll(`${selector} a`)).forEach(addFaviconToAnchorEl);
+		// we don't care about mutationsList; it's simpler (and faster) to just query the DOM directly
+
 		Array.from(rootEl.querySelectorAll(`${selector} a`)).forEach(addFaviconToAnchorEl);
-		
 	};
 
-	// debounce the observer callback: "will postpone its execution until after wait = 250ms have elapsed since 
-	// the last time it was invoked."
-	// otherwise we would be calling document.querySelectorAll and addFaviconToAnchorEl for
-	// for every keystroke
+	// debounce the observer callback: 
+	// "will postpone its execution until after wait = 500ms have elapsed since the last time it was invoked.";
+	// otherwise we would be calling querySelectorAll and addFaviconToAnchorEl for for every keystroke
 
 	let observer = internals.observer = new MutationObserver(debounce(observerCallback));
 
 	let observerOptions = {
-		// attributes: true,
+		attributes: false,
 		childList: true,
 		subtree: true
 	}
-
 	
 	observer.observe(rootEl, observerOptions);
 
-	// force initial execution by adding and removing a dummy element
+	// force initial execution by adding and immediatelly removing a dummy element
 
 	rootEl.appendChild(document.createElement('span')).remove()
 }
