@@ -4,7 +4,7 @@ A simple Roam Research extension that will display the favicon (small website ic
 
 This extension can be installed using Roam Depot. It doesn't manipulate your notes in any way (in fact it doesn't use the [Roam API](https://roamresearch.com/#/app/developer-documentation/page/tIaOPdXCj)). The icon is added using the css `background-image` property in the `<a>` element relative to the link. For more details see this article: https://css-tricks.com/favicons-next-to-external-links/
 
-
+![demo](https://user-images.githubusercontent.com/2184309/179632500-72cc8496-6e40-4c71-bcf9-07ef700de164.jpg)
 
 ## Future improvement
 
