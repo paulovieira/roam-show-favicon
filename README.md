@@ -16,7 +16,10 @@ Demo:
   * set the padding between the icon and link (default: 4px)
   * set the icon provider: google, duckduckgo, yandex, etc (default: google)
   * fetch 32px icons from the provider, instead of the default 16px (which might make sense for retina displays?)
+- handle local/offline case: should we detect it and don't show the favicon at all?
 - cache the favicon somehow in localstorage?
 - handle the case of missing favicon (404) - duckduckgo already handles this using a default icon, but the other don't
-- add some information about which providers seem to work best (example: duckduckgo doesn't seem to work well sometimes; essay.app, lisboaparapessoas.pt, etc)
+- add some information about which providers seem to work best; some problems found so far:
+  * duckduckgo: essay.app, lisboaparapessoas.pt
+  * google: heroku.com (looks like google is ignoring the `<link rel="icon" type="image/x-icon" href="..." />` element?)
 - consider circular background? example: https://markheath.net/post/font-awesome-circle-background
