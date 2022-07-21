@@ -16,7 +16,7 @@ Demo:
   * set the padding between the icon and link (default: 4px)
   * set the icon provider: google, duckduckgo, yandex, etc (default: google)
   * fetch 32px icons from the provider, instead of the default 16px (which might make sense for retina displays?)
-- all option to only show favicon when the url/domain is not visible (that is, for cases like this: `[link to website](domain.com)`)?
+- add option to only show favicon when the url/domain is not visible (that is, for cases like this: `[link to website](domain.com)`)?
 - handle local/offline case: should we detect it and don't show the favicon at all?
 - cache the favicon somehow in localstorage?
 - handle the case of missing favicon (404) - retry with a different provider?
