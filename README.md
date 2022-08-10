@@ -20,8 +20,9 @@ Demo:
 - handle local/offline case: should we detect it and don't show the favicon at all?
 - cache the favicon somehow in localstorage?
 - handle the case of missing favicon (404) - retry with a different provider?
+  * see: https://stackoverflow.com/questions/3019077/detecting-an-image-404-in-javascript
 - add some information about which providers seem to work best; some problems found so far:
   * duckduckgo: essay.app; lisboaparapessoas.pt; (seems to miss many websites... but we can force them to show by making a search?)
   * google: heroku.com (looks like google is ignoring the `<link rel="icon" type="image/x-icon" href="..." />` element?)
-
+- handle URI schemes other then http and https: mailto, file, etc (reference: https://en.wikipedia.org/wiki/List_of_URI_schemes)
 - consider circular background? example: https://markheath.net/post/font-awesome-circle-background
